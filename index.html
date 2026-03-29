@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cockpit de Pilotage Financier - Vision Empire 2027</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #FF8C00; /* Orange */
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+        .objectif {
+            background-color: #FFF3E0; /* Orange clair */
+            border-left: 5px solid #FFA500; /* Orange */
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .details-button {
+            background-color: #FFA500; /* Orange */
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+        .details-button:hover {
+            background-color: #FF8C00; /* Orange foncé */
+        }
+        .details-content {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: none; /* Hidden by default */
+        }
+        .progress-bar-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            width: 10%; /* Initial progress, will be updated */
+            height: 20px;
+            background-color: #FFA500; /* Orange */
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            font-size: 0.8em;
+            border-radius: 5px;
+            transition: width 0.5s ease-in-out;
+        }
+        .projet, .idee-labo {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .projet h3, .idee-labo h3 {
+            margin-top: 0;
+            color: #FF8C00; /* Orange */
+        }
+        .footer {
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cockpit de Pilotage Financier - Vision Empire 2027</h1>
+
+        <div class="objectif">
+            <h2>Objectif Final :</h2>
+            <p>Bâtir une infrastructure de mini-entreprises automatisées générant un **bénéfice net de 500 $/mois** d'ici votre **Tour du Monde en Juillet 2027**.</p>
+        </div>
+
+        <div class="section-header">
+            <h2>🟢 ZONE PROJETS ACTIFS</h2>
+        </div>
+        <div id="projetsActifs">
+            <div class="projet">
+                <h3>PROJET N°1 : Dégustation Vins Valais</h3>
+                <p>Action : Alimentation massive de la base de données (Valais entier).</p>
+                <p>Tâche : Scan des horaires/contacts et injection automatique sur le site.</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 30%;">30%</div>
+                </div>
+                <button class="details-button" onclick="toggleDetails('detailsVinValais')">Piloter</button>
+                <div id="detailsVinValais" class="details-content">
+                    <p>Détails techniques : Le projet vise à centraliser toutes les informations sur les dégustations de vins du Valais. Mon rôle inclut la recherche des vignerons, la collecte d'informations sur leurs offres de dégustation via web scraping et API si disponibles, l'intégration des données dans une base de données structurée, et l'affichage dynamique sur un site web dédié. La monétisation sera basée sur l'affiliation et les partenariats.</p>
+                    <h4>Choix disponibles :</h4>
+                    <ul>
+                        <li>**Proposer un partenariat direct aux vignerons (avec monétisation à la performance) :**
+                            <ul>
+                                <li>Coût : 0 CHF (mon travail est inclus).</li>
+                                <li>ROI estimé : Modéré à Élevé, dépend de l'adoption des vignerons et du trafic généré.</li>
+                                <li>Alternative gratuite : Continuer à lister les dégustations sans partenariat direct, générant du trafic organique sans monétisation directe.</li>
+                                <li>Action requise de Michel : Valider l'approche de contact et de proposition.</li>
+                            </ul>
+                        </li>
+                        <li>**Intégrer des liens d'affiliation existants (si trouvés) :**
+                            <ul>
+                                <li>Coût : 0 CHF (mon travail est inclus).</li>
+                                <li>ROI estimé : Faible à Modéré (dépend de l'existence et de la pertinence des programmes).</li>
+                                <li>Alternative gratuite : N/A (c'est déjà une approche "gratuite").</li>
+                                <li>Action requise de Michel : Valider l'inscription aux programmes si nécessaire.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="projet">
+                <h3>PROJET N°2 : Data Boutique</h3>
+                <p>Action : Structuration de données numériques (CSV/PDF) pour Gumroad/Etsy (Hors vin).</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 40%;">40%</div>
+                </div>
+                <button class="details-button" onclick="toggleDetails('detailsDataBoutique')">Piloter</button>
+                <div id="detailsDataBoutique" class="details-content">
+                    <p>Détails techniques : Ce projet consiste à identifier des niches de produits numériques à forte demande sur diverses plateformes (Gumroad, Etsy, Amazon). Mon rôle inclut le scan de marché, la proposition de produits concrets (PDFs, templates, guides, comparatifs), la création de ces produits (ou la supervision), la mise en place des fiches produits optimisées, et la gestion des ventes. L'objectif est de générer des revenus passifs élevés avec un faible coût initial, en multipliant les "boutiques d'informations".</p>
+                    <h4>Propositions de "Data Boutiques" initiales :</h4>
+                    <ul>
+                        <li>**Data Boutique 1 : Guides d'achat "Top du mois" (ex: Machines à laver)**
+                            <ul>
+                                <li>Description : Guides comparatifs générés et mis à jour automatiquement, monétisés par affiliation Amazon ou autres.</li>
+                                <li>Coût : 0 CHF (mon travail inclus, hébergement GitHub).</li>
+                                <li>ROI estimé : Modéré à Élevé (dépend du trafic et des taux de conversion).</li>
+                            </ul>
+                        </li>
+                        <li>**Data Boutique 2 : Guides "Meilleures Chaussures de Randonnée"**
+                            <ul>
+                                <li>Description : Comparatifs détaillés avec liens affiliés.</li>
+                                <li>Coût : 0 CHF.</li>
+                                <li>ROI estimé : Modéré à Élevé.</li>
+                            </ul>
+                        </li>
+                        <li>**Data Boutique 3 : Stratégie Pinterest + Canva + Affiliations**
+                            <ul>
+                                <li>Description : Création et diffusion automatisée de visuels pour promouvoir des produits affiliés sur Pinterest.</li>
+                                <li>Coût : 0 CHF (outils gratuits/freemium, mon travail inclus).</li>
+                                <li>ROI estimé : Modéré.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Action requise de Michel : Valider la création et le lancement de ces premières "Data Boutiques".</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>🧪 ZONE LABORATOIRE D'IDÉES</h2>
+        </div>
+        <div id="laboratoireIdees">
+            <div class="idee-labo">
+                <h3>Piste 1 : Automatisation de Contenu de Niche SEO via IA</h3>
+                <p>Score Potentiel : 8/10</p>
+                <button class="details-button" onclick="toggleDetails('detailsLabo1')">Creuser</button>
+                <div id="detailsLabo1" class="details-content">
+                    <p>Détails techniques : Création d'un réseau de micro-sites/blogs automatisés sur des niches SEO très spécifiques, générant du contenu optimisé par IA et monétisé par affiliation. Ex: "Guides complets sur l'entretien des couteaux de cuisine", "Comparatif des meilleurs aspirateurs robots pour poils d'animaux".</p>
+                    <p>Analyse :</p>
+                    <ul>
+                        <li>Légalité : Conforme si respect des droits d'auteur sur les éléments de base et transparence sur le contenu généré par IA.</li>
+                        <li>Coût / ROI : Coût 0 CHF (hébergement GitHub Pages/blog gratuit, mon travail inclus). ROI très élevé si la niche est bien choisie et le contenu est de qualité.</li>
+                        <li>Moralité : Aucun doute moral si transparent sur l'IA et le but est d'informer.</li>
+                        <li>Complexité technique : Modérée (mise en place de l'automatisation de la génération et publication).</li>
+                    </ul>
+                    <p>Action requise de Michel : Valider le "creusement" de cette piste pour une analyse approfondie et une proposition concrète.</p>
+                </div>
+            </div>
+            <div class="idee-labo">
+                <h3>Piste 2 : Micro-Service de Génération de Leads B2B Local (Suisse)</h3>
+                <p>Score Potentiel : 7/10</p>
+                <button class="details-button" onclick="toggleDetails('detailsLabo2')">Creuser</button>
+                <div id="detailsLabo2" class="details-content">
+                    <p>Détails techniques : Développement d'un outil automatisé de génération de leads qualifiés pour des petites entreprises locales en Suisse. Ex: "Liste de PME ayant récemment levé des fonds", "Identification de nouveaux commerces dans le Valais". Vendu sous forme d'abonnement ou de packs de leads.</p>
+                    <p>Analyse :</p>
+                    <ul>
+                        <li>Légalité : Doit respecter le RGPD (protection des données) suisse et européen. Collecte de données publiques et respect des opt-out.</li>
+                        <li>Coût / ROI : Coût 0 CHF (mon travail inclus, outils de scraping gratuits). ROI élevé si la valeur des leads est perçue.</li>
+                        <li>Moralité : Aucun doute moral si la collecte est publique et conforme aux réglementations.</li>
+                        <li>Complexité technique : Élevée (développement de scripts de scraping robustes et interface de vente).</li>
+                    </ul>
+                    <p>Action requise de Michel : Valider le "creusement" de cette piste pour une analyse approfondie et une proposition concrète.</p>
+                </div>
+            </div>
+            <div class="idee-labo">
+                <h3>Piste 3 : Templates Numériques Automatisés (ex: Excel/Google Sheets)</h3>
+                <p>Score Potentiel : 6/10</p>
+                <button class="details-button" onclick="toggleDetails('detailsLabo3')">Creuser</button>
+                <div id="detailsLabo3" class="details-content">
+                    <p>Détails techniques : Création et vente de templates avancés pour des outils populaires (Excel, Google Sheets) avec des fonctionnalités semi-automatisées pour des besoins spécifiques. Ex: "Tableau de bord financier pour Freelancers", "Gestion de stock simplifiée pour PME". Monétisation via plateformes comme Gumroad.</p>
+                    <p>Analyse :</p>
+                    <ul>
+                        <li>Légalité : Conforme si les templates sont originaux et ne violent pas de droits existants.</li>
+                        <li>Coût / ROI : Coût 0 CHF (mon travail inclus, plateformes de vente comme Gumroad avec commission sur vente). ROI modéré (dépend du marketing et de la niche).</li>
+                        <li>Moralité : Aucun doute moral.</li>
+                        <li>Complexité technique : Modérée (conception de la logique et de l'interface du template).</li>
+                    </ul>
+                    <p>Action requise de Michel : Valider le "creusement" de cette piste pour une analyse approfondie et une proposition concrète.</p>
+                </div>
+            </div>
+            <div class="idee-labo">
+                <h3>Slot 4 : Recherche en cours...</h3>
+                <p>Score Potentiel : N/A</p>
+                <button class="details-button" onclick="toggleDetails('detailsLabo4')">Creuser</button>
+                <div id="detailsLabo4" class="details-content">
+                    <p>Mission : Scan global pour identifier des opportunités de revenus passifs à forte marge. Critères : faible coût de démarrage, scalabilité, potentiel de 15$-49$ par vente/service.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Dernière mise à jour par Pétole : <span id="lastUpdated">2026-03-29 à 09:47 UTC</span></p>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+
+        function updateLastUpdated() {
+            const now = new Date();
+            const year = now.getUTCFullYear();
+            const month = (now.getUTCMonth() + 1).toString().padStart(2, '0');
+            const day = now.getUTCDate().toString().padStart(2, '0');
+            const hours = now.getUTCHours().toString().padStart(2, '0');
+            const minutes = now.getUTCMinutes().toString().padStart(2, '0');
+            const seconds = now.getUTCSeconds().toString().padStart(2, '0');
+            document.getElementById('lastUpdated').textContent = `${year}-${month}-${day} à ${hours}:${minutes}:${seconds} UTC`;
+        }
+        updateLastUpdated();
+    </script>
+</body>
+</html>
