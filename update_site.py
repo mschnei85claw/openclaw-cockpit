@@ -20,6 +20,28 @@ except FileNotFoundError:
     print("data.json not found.")
     sys.exit(1)
 
+# Ensure communications list exists
+if 'communications' not in data:
+    data['communications'] = []
+
+# Add the new message
+now = datetime.datetime.now(datetime.timezone.utc)
+time_str = now.strftime('%Y-%m-%d %H:%M UTC')
+
+new_message = {
+    "time": time_str,
+    "content": "<b>RÉSUMÉ DES MESSAGES PERDUS (Bug d'affichage Chat) :</b><br>1. <b>Site Vins Valais :</b> J'ai pris la main sur le dépôt `vins-valais-site`. J'y ai poussé la structure de base, intégré ton code <b>Google Analytics (G-C2D5WZK2VW)</b>, et surtout, j'ai transféré la belle page <b>'Via pour JUJU' (Fribourg)</b> directement sur le site avec un onglet dédié dans le menu. <br>2. <b>HTTPS (Cadenas) :</b> Le message jaune 'DNS Check in Progress' sur GitHub est normal. GitHub vérifie la propagation mondiale. C'est en bonne voie, le cadenas vert 'Enforce HTTPS' est coché. Patiente environ 30-45 min et vérifie `https://degustation-vins-valais.ch/`.<br>3. <b>Gumroad (Les 3 Guides) :</b> Je valide ta méthode 'Cockpit'. Je suis en train de générer les PDF et les textes de vente pour les 3 prochains guides (Aspirateurs, Excel, Randonnée). Je créerai une section 'PRODUITS PRÊTS À PUBLIER' ici même sur le Cockpit avec les liens de téléchargement et les textes à copier-coller pour ton compte `clawmaster56`."
+}
+
+# Insert at the beginning
+data['communications'].insert(0, new_message)
+
+# Keep only the last 5 messages
+data['communications'] = data['communications'][:5]
+
+with open('data.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, indent=2, ensure_ascii=False)
+
 # Generate HTML
 html = f"""<!DOCTYPE html>
 <html lang="fr">
@@ -32,6 +54,9 @@ html = f"""<!DOCTYPE html>
         .container {{max-width: 900px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);}}
         h1, h2, h3 {{color: #FF8C00; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 20px;}}
         .objectif {{background-color: #FFF3E0; border-left: 5px solid #FFA500; padding: 15px; margin-bottom: 20px; font-size: 1.1em; font-weight: bold;}}
+        .comm-log {{background-color: #e8f4f8; border-left: 5px solid #2980b9; padding: 15px; margin-bottom: 20px;}}
+        .comm-message {{margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed #ccc;}}
+        .comm-time {{font-size: 0.8em; color: #7f8c8d; font-weight: bold; margin-bottom: 5px; display: block;}}
         .section-header {{display: flex; justify-content: space-between; align-items: center; margin-top: 20px;}}
         .details-button {{background-color: #FFA500; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9em; transition: background-color 0.3s ease;}}
         .details-button:hover {{background-color: #FF8C00;}}
@@ -46,6 +71,21 @@ html = f"""<!DOCTYPE html>
 <body>
     <div class="container">
         <h1>Cockpit de Pilotage Financier - Vision Empire 2027</h1>
+        
+        <div class="comm-log">
+            <h2>📢 Dernières Communications (Backup Chat)</h2>
+"""
+for msg in data.get('communications', []):
+    html += f"""
+            <div class="comm-message">
+                <span class="comm-time">{msg['time']}</span>
+                <div>{msg['content']}</div>
+            </div>
+"""
+
+html += f"""
+        </div>
+
         <div class="objectif">
             <h2>Objectif Final :</h2>
             <p>{data.get('objective', '')}</p>
@@ -120,14 +160,13 @@ for lab in data.get('labIdeas', []):
             </div>
 """
 
-now = datetime.datetime.now(datetime.timezone.utc)
-time_str = now.strftime('%Y-%m-%d à %H:%M:%S UTC')
+time_str_footer = now.strftime('%Y-%m-%d à %H:%M:%S UTC')
 
 html += f"""
         </div>
     </div>
     <div class="footer">
-        <p>Dernière mise à jour par Pétole : <span id="lastUpdated">{time_str}</span></p>
+        <p>Dernière mise à jour par Pétole : <span id="lastUpdated">{time_str_footer}</span></p>
     </div>
     <script>
         function toggleDetails(id) {{
@@ -146,10 +185,10 @@ html += f"""
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
-print("Generated index.html")
+print("Generated index.html with comm log")
 
 # Git operations
 run_command("git add data.json update_site.py index.html")
-run_command('git commit -m "Automated update via script"')
+run_command('git commit -m "Ajout du log de communication (Backup Chat)"')
 run_command('git push origin main')
 print("Pushed to GitHub")
