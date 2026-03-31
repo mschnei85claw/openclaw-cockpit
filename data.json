@@ -1,0 +1,122 @@
+{
+  "objective": "Bâtir une infrastructure de mini-entreprises automatisées générant un **bénéfice net de 500 $/mois** d'ici votre **Tour du Monde en Juillet 2027**.",
+  "projects": [
+    {
+      "id": "detailsVinValais",
+      "title": "PROJET N°1 : Dégustation Vins Valais",
+      "action": "Alimentation massive de la base de données (Valais entier).",
+      "task": "Scan des horaires/contacts et injection automatique sur le site.",
+      "progress": 50,
+      "details": "Le projet vise à centraliser toutes les informations sur les dégustations de vins du Valais. Mon rôle inclut la recherche des vignerons, la collecte d'informations sur leurs offres de dégustation via web scraping et API si disponibles, l'intégration des données dans une base de données structurée, et l'affichage dynamique sur un site web dédié. La monétisation sera basée sur l'affiliation et les partenariats.",
+      "options": [
+        {
+          "title": "Proposer un partenariat direct aux vignerons (avec monétisation à la performance) :",
+          "cost": "0 CHF (mon travail est inclus).",
+          "roi": "Modéré à Élevé, dépend de l'adoption des vignerons et du trafic généré.",
+          "alternative": "Continuer à lister les dégustations sans partenariat direct, générant du trafic organique sans monétisation directe.",
+          "action": "Valider l'approche de contact et de proposition."
+        },
+        {
+          "title": "Intégrer des liens d'affiliation existants (si trouvés) :",
+          "cost": "0 CHF (mon travail est inclus).",
+          "roi": "Faible à Modéré (dépend de l'existence et de la pertinence des programmes).",
+          "alternative": "N/A (c'est déjà une approche \"gratuite\").",
+          "action": "Valider l'inscription aux programmes si nécessaire."
+        }
+      ]
+    },
+    {
+      "id": "detailsDataBoutique",
+      "title": "PROJET N°2 : Data Boutique",
+      "action": "Structuration de données numériques (CSV/PDF) pour diverses plateformes.",
+      "task": "",
+      "progress": 70,
+      "details": "Ce projet consiste à identifier des niches de produits numériques à forte demande sur diverses plateformes (Gumroad, Etsy, Amazon, etc.). Mon rôle inclut le scan de marché, la proposition de produits concrets (PDFs, templates, guides, comparatifs), la création de ces produits (ou la supervision), la mise en place des fiches produits optimisées, et la gestion des ventes. L'objectif est de générer des revenus passifs élevés avec un faible coût initial, en multipliant les \"boutiques d'informations\" pour atteindre 35 boutiques.",
+      "options": [
+        {
+          "title": "Data Boutique 1 : Guides d'achat \"Top du mois\" (ex: Machines à laver)",
+          "cost": "0 CHF (mon travail inclus, hébergement GitHub).",
+          "roi": "Modéré à Élevé (dépend du trafic et des taux de conversion).",
+          "alternative": "",
+          "action": "Description : Guides comparatifs générés et mis à jour automatiquement, monétisés par affiliation Amazon ou autres."
+        },
+        {
+          "title": "Data Boutique 2 : Guides \"Meilleures Chaussures de Randonnée\"",
+          "cost": "0 CHF.",
+          "roi": "Modéré à Élevé.",
+          "alternative": "",
+          "action": "Description : Comparatifs détaillés avec liens affiliés."
+        },
+        {
+          "title": "Data Boutique 3 : Stratégie Pinterest + Canva + Affiliations",
+          "cost": "0 CHF (outils gratuits/freemium, mon travail inclus).",
+          "roi": "Modéré.",
+          "alternative": "",
+          "action": "Description : Création et diffusion automatisée de visuels pour promouvoir des produits affiliés sur Pinterest."
+        }
+      ]
+    }
+  ],
+  "urgentMission": {
+    "title": "Mission d'Urgence 1 : Via Ferrata Fribourg",
+    "action": "Création d'un guide détaillé des via ferrata de Fribourg.",
+    "task": "Publication d'une page \"Via pour JUJU\" sur le Cockpit.",
+    "progress": 90,
+    "link": "via-ferrata-fribourg.html",
+    "linkText": "Voir le Guide"
+  },
+  "labIdeas": [
+    {
+      "id": "detailsLabo1",
+      "title": "Piste 1 : Automatisation de Contenu de Niche SEO via IA",
+      "score": "8/10",
+      "details": "Création d'un réseau de micro-sites/blogs automatisés sur des niches SEO très spécifiques, générant du contenu optimisé par IA et monétisé par affiliation. Ex: \"Guides complets sur l'entretien des couteaux de cuisine\", \"Comparatif des meilleurs aspirateurs robots pour poils d'animaux\".",
+      "analysis": [
+        "Légalité : Conforme si respect des droits d'auteur sur les éléments de base et transparence sur le contenu généré par IA.",
+        "Coût / ROI : Coût 0 CHF (hébergement GitHub Pages/blog gratuit, mon travail inclus). ROI très élevé si la niche est bien choisie et le contenu est de qualité.",
+        "Moralité : Aucun doute moral si transparent sur l'IA et le but est d'informer.",
+        "Complexité technique : Modérée (mise en place de l'automatisation de la génération et publication)."
+      ],
+      "action": "Valider le \"creusement\" de cette piste pour une analyse approfondie et une proposition concrète."
+    },
+    {
+      "id": "detailsLabo2",
+      "title": "Piste 2 : Micro-Service de Génération de Leads B2B Local (Suisse)",
+      "score": "7/10",
+      "details": "Développement d'un outil automatisé de génération de leads qualifiés pour des petites entreprises locales en Suisse. Ex: \"Liste de PME ayant récemment levé des fonds\", \"Identification de nouveaux commerces dans le Valais\". Vendu sous forme d'abonnement ou de packs de leads.",
+      "analysis": [
+        "Légalité : Doit respecter le RGPD (protection des données) suisse et européen. Collecte de données publiques et respect des opt-out.",
+        "Coût / ROI : Coût 0 CHF (mon travail inclus, outils de scraping gratuits). ROI élevé si la valeur des leads est perçue.",
+        "Moralité : Aucun doute moral si la collecte est publique et conforme aux réglementations.",
+        "Complexité technique : Élevée (développement de scripts de scraping robustes et interface de vente)."
+      ],
+      "action": "Valider le \"creusement\" de cette piste pour une analyse approfondie et une proposition concrète."
+    },
+    {
+      "id": "detailsLabo3",
+      "title": "Piste 3 : Templates Numériques Automatisés (ex: Excel/Google Sheets)",
+      "score": "6/10",
+      "details": "Création et vente de templates avancés pour des outils populaires (Excel, Google Sheets) avec des fonctionnalités semi-automatisées pour des besoins spécifiques. Ex: \"Tableau de bord financier pour Freelancers\", \"Gestion de stock simplifiée pour PME\". Monétisation via plateformes comme Gumroad.",
+      "analysis": [
+        "Légalité : Conforme si les templates sont originaux et ne violent pas de droits existants.",
+        "Coût / ROI : Coût 0 CHF (mon travail inclus, plateformes de vente comme Gumroad avec commission sur vente). ROI modéré (dépend du marketing et de la niche).",
+        "Moralité : Aucun doute moral.",
+        "Complexité technique : Modérée (conception de la logique et de l'interface du template)."
+      ],
+      "action": "Valider le \"creusement\" de cette piste pour une analyse approfondie et une proposition concrète."
+    },
+    {
+      "id": "detailsLabo4",
+      "title": "Piste 4 : Monétisation de Contenu IA \"Sexy\" (non-nudité)",
+      "score": "9/10",
+      "details": "Création de profils automatisés sur des plateformes de contenu (ex: Patreon, Fanvue ou sites similaires respectant les CGU et les lois) proposant des vidéos / images / histoires \"sexy\" générées par IA (sans nudité illégale, et toujours légalement conforme). Monétisation via abonnements ou contenu payant à la demande.",
+      "analysis": [
+        "Légalité : Conforme si pas de nudité illégale, respect de l'âge légal, transparence IA, respect des droits d'auteur pour les éléments de base. Nécessite un plan juridique détaillé si cette option est retenue.",
+        "Coût / ROI : Très faible coût de démarrage (mon travail, outils IA freemium). ROI potentiellement très élevé via abonnements ou ventes directes.",
+        "Moralité : Comme tu l'as défini, cette décision te revient. Je suis prêt à te présenter tous les éléments pour ta décision.",
+        "Complexité technique : Modérée (création d'un flux de contenu IA, gestion des plateformes)."
+      ],
+      "action": "Valider le \"creusement\" de cette piste pour une analyse approfondie et une proposition concrète."
+    }
+  ]
+}
