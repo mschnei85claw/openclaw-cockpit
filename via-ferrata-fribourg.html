@@ -3,19 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide Via Ferrata des Grottes de Nierlet-les-Bains - Fribourg</title>
+    <title>Via Ferrata Nierlet-les-Bains | L'Aventure à Fribourg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #E65100; /* Orange dynamique */
+            --secondary-color: #2E7D32; /* Vert forêt */
+            --text-dark: #333;
+            --text-light: #fff;
+            --bg-light: #f9f9f9;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
         }
-        .container {
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-bottom: 30px;
             max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 15px rgba(230, 81, 0, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #F57C00;
+            transform: translateY(-3px);
+        }
+
+        /* Container & Content */
+        .container {
+            max-width: 1000px;
+            margin: -50px auto 50px; /* Overlap hero slightly */
+            background: var(--text-light);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--secondary-color);
+            font-size: 2.2em;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            display: inline-block;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-light);
+            padding: 25px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);\n        }\n        h1, h2, h3 {\n            color: #FF8C00; /* Orange */\n            border-bottom: 2px solid #eee;\n            padding-bottom: 10px;\n            margin-top: 20px;\n        }\n        .back-button {\n            display: inline-block;\n            background-color: #007bff;\n            color: white;\n            padding: 10px 15px;\n            border-radius: 5px;\n            text-decoration: none;\n            margin-bottom: 20px;\n        }\n        .info-box {\n            background-color: #e6f7ff;\n            border-left: 5px solid #007bff;\n            padding: 15px;\n            margin-bottom: 15px;\n        }\n        ul {\n            list-style-type: disc;\n            margin-left: 20px;\n        }\n        b {\n            color: #FF8C00;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <a href=\"index.html\" class=\"back-button\">← Retour au Cockpit</a>\n\n        <h1>Guide de la Via Ferrata des Grottes de Nierlet-les-Bains (Fribourg)</h1>\n\n        <p>Découvre l\'aventure verticale de la Via Ferrata des Grottes de Nierlet-les-Bains, une expérience unique à Fribourg alliant défi sportif et beauté naturelle.</p>\n\n        <h2>Informations Clés</h2>\n        <div class=\"info-box\">\n            <p><b>Localisation :</b> Les Grottes de Nierlet-les-Bains, Fribourg, Suisse.</p>\n            <p><b>Accès :</b> Facilement accessible depuis la ville de Fribourg, généralement après une courte marche d\'approche.</p>\n            <p><b>Difficulté :</b> K3 - K4 (Difficile à Très Difficile). Nécessite une bonne condition physique, une expérience des via ferrata et l\'absence de vertige.</p>\n            <p><b>Longueur :</b> Environ 300 mètres de paroi équipée.</p>\n            <p><b>Dénivelé :</b> Environ 150 mètres.</p>\n            <p><b>Durée :</b> Environ 2 à 3 heures (incluant l\'approche et le retour).</p>\n        </div>\n\n        <h2>Équipement Indispensable</h2>\n        <ul>\n            <li>Kit de Via Ferrata (longe avec absorbeur d\'énergie, baudrier, casque)</li>\n            <li>Gants (pour protéger les mains des câbles)</li>\n            <li>Chaussures de randonnée avec bonne adhérence</li>\n            <li>Sac à dos avec eau, encas, trousse de premiers secours</li>\n            <li>Vêtements adaptés à la météo et à l\'effort</li>\n        </ul>\n\n        <h2>Conseils de Sécurité</h2>\n        <ul>\n            <li>Ne jamais s\'engager seul.</li>\n            <li>Vérifier l\'état du matériel avant chaque départ.</li>\n            <li>Respecter les consignes de sécurité et la signalisation.</li>\n            <li>Ne pas s\'engager par mauvais temps (pluie, orage, vent fort).</li>\n            <li>Se renseigner sur l\'état d\'ouverture et les conditions spécifiques avant de partir.</li>\n        </ul>\n\n        <h2>Pourquoi cette Via Ferrata ?</h2>\n        <p>La Via Ferrata des Grottes de Nierlet-les-Bains offre un parcours varié avec des passages aériens, des ponts de singe et des échelles, le tout dans un cadre naturel magnifique avec des vues imprenables sur la région de Fribourg. C\'est une aventure parfaite pour les amateurs de sensations fortes et de nature.</p>\n\n        <p>Pour plus d\'informations ou pour vérifier les conditions d\'accès, il est recommandé de consulter les offices de tourisme locaux ou les guides spécialisés en ligne.</p>\n    </div>\n</body>\n</html>
+            border-left: 5px solid var(--primary-color);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3em;
+        }
+
+        .feature-card p {
+            margin-bottom: 0;
+            font-size: 1.1em;
+        }
+        
+        .feature-card strong {
+            color: var(--text-dark);
+        }
+
+        /* Lists */
+        ul.styled-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.styled-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul.styled-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .back-nav {
+            margin-bottom: 20px;
+        }
+        
+        .back-nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .back-nav a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Grottes de Nierlet-les-Bains</h1>
+        <p>L'expérience Via Ferrata incontournable au cœur de Fribourg. Défiez la verticalité, dominez la nature.</p>
+        <a href="#details" class="cta-button">Découvrir le Parcours</a>
+    </div>
+
+    <div class="container" id="details">
+        <div class="back-nav">
+            <a href="index.html">← Retour au Cockpit d'administration</a>
+        </div>
+
+        <p style="font-size: 1.2em; text-align: center; max-width: 800px; margin: 0 auto 40px;">
+            Plongez dans une aventure vertigineuse. La Via Ferrata des Grottes de Nierlet-les-Bains n'est pas qu'un simple parcours sportif, c'est un voyage spectaculaire entre roche et vide, offrant des panoramas à couper le souffle sur la région fribourgeoise.
+        </p>
+
+        <h2>L'Essentiel en Bref</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>📍 Localisation</h3>
+                <p>Nierlet-les-Bains,<br><strong>Canton de Fribourg</strong></p>
+            </div>
+            <div class="feature-card">
+                <h3>⛰️ Difficulté</h3>
+                <p><strong>K3 - K4</strong><br>(Difficile à Très Difficile)</p>
+            </div>
+            <div class="feature-card">
+                <h3>⏱️ Durée</h3>
+                <p><strong>2h à 3h</strong><br>Approche et parcours inclus</p>
+            </div>
+            <div class="feature-card">
+                <h3>📏 Profil</h3>
+                <p><strong>300m</strong> de parcours<br><strong>150m</strong> de dénivelé</p>
+            </div>
+        </div>
+
+        <h2>Pourquoi choisir ce parcours ?</h2>
+        <p style="font-size: 1.1em;">
+            Conçue pour les amateurs de sensations fortes, cette via ferrata propose un itinéraire technique et ludique. Vous enchaînerez les passages aériens vertigineux, traverserez des ponts de singe suspendus et gravirez des échelles impressionnantes. L'engagement physique est récompensé à chaque instant par une vue imprenable sur les paysages environnants.
+        </p>
+
+        <h2>Équipement Requis</h2>
+        <ul class="styled-list">
+            <li><strong>Kit complet de Via Ferrata :</strong> Longe en "Y" avec absorbeur d'énergie obligatoire.</li>
+            <li><strong>Baudrier d'escalade :</strong> Confortable et bien ajusté.</li>
+            <li><strong>Casque de montagne :</strong> Indispensable contre les chutes de pierres.</li>
+            <li><strong>Gants spécifiques :</strong> Pour une meilleure accroche sur les câbles et protéger vos mains.</li>
+            <li><strong>Chaussures adaptées :</strong> Chaussures de randonnée ou d'approche avec une excellente semelle (Vibram).</li>
+        </ul>
+
+        <h2>Consignes de Sécurité Strictes</h2>
+        <ul class="styled-list" style="li::before { content: '⚠️'; color: var(--primary-color); }">
+            <li>L'accès est réservé aux personnes ayant une <strong>expérience préalable</strong> ou accompagnées d'un guide professionnel.</li>
+            <li>L'utilisation du matériel spécifique (longe avec absorbeur) est <strong>obligatoire et vitale</strong>.</li>
+            <li>Consultez toujours la <strong>météo locale</strong> avant de vous engager. Ne partez jamais en cas de risque d'orage ou de pluie annoncée.</li>
+            <li>Respectez l'espacement entre les grimpeurs (une seule personne par section de câble entre deux points d'ancrage).</li>
+        </ul>
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: var(--bg-light); border-radius: 8px;">
+            <h3 style="margin-top:0; border:none; color: var(--text-dark);">Prêt pour l'aventure ?</h3>
+            <p>Assurez-vous d'avoir le niveau et l'équipement requis avant de vous lancer.</p>
+            <a href="#" class="cta-button" style="margin-top: 15px;">Réserver un Guide (Bientôt disponible)</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
